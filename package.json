@@ -1,0 +1,20 @@
+{
+  "name": "actions-builder-canvas",
+  "version": "0.0.0",
+  "private": true,
+  "description": "An Action that demonstrates Interactive Canvas.",
+  "engines": {
+    "node": "10"
+  },
+  "scripts": {
+    "lint": "eslint \"**/*.js\"",
+    "lint:fix": "eslint --fix \"**/*.js\"",
+    "test": "npm run lint",
+    "serve": "firebase serve",
+    "deploy": "firebase deploy"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}

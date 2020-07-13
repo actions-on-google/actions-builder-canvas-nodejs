@@ -20,8 +20,9 @@ const {
 } = require('@assistant/conversation');
 const functions = require('firebase-functions');
 
-const INSTRUCTIONS = 'Do you want me to change color or pause spinning? ' +
-  'You can also tell me to ask you later.';
+const INSTRUCTIONS = 'Do you want me to change color or pause spinning?';
+
+const CANVAS_URL = 'https://PROJECT_ID.web.app';
 
 const tints = {
   black: 0x000000,
@@ -42,8 +43,6 @@ const tints = {
   white: 0xFFFFFF,
 };
 
-const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
-
 const app = conversation({debug: true});
 
 app.handle('welcome', (conv) => {
@@ -55,7 +54,8 @@ app.handle('welcome', (conv) => {
   conv.add('Welcome! Do you want me to change color or pause spinning? ' +
     'You can also tell me to ask you later.');
   conv.add(new Canvas({
-    url: `https://${firebaseConfig.projectId}.web.app`,
+    // Update this placeholder string with the URL for your canvas web app.
+    url: CANVAS_URL,
   }));
 });
 

@@ -13,6 +13,13 @@ This sample demonstrates Interactive Canvas for Google Assistant Actions.
 #### Actions Console
 1. From the [Actions on Google Console](https://console.actions.google.com/), **New project** > **Create project** > under **What kind of Action do you want to build?** > **Game** > **Blank project for smart display**
 
+#### Firebase Hosting Deployment
+1. Run `firebase deploy --project {PROJECT_ID} --only hosting` to deploy the web app to Firebase Hosting
+   + To find your Project ID: In the Actions Console console for your project, navigate to ⋮ > Project settings > Project ID.
+
+#### Fulfillment setup
+1. Navigate to `sdk/webhooks/ActionsOnGoogleFulfillment/index.js`, and replace the place holder string `https://PROJECT_ID.web.app` of the `CANVAS_URL` variable with the URL to your own web app.
+
 #### Actions CLI
 1. Install the [Actions CLI](https://developers.google.com/assistant/actionssdk/gactions)
 1. Navigate to `sdk/settings/settings.yaml`, and replace `<PROJECT_ID>` with your project ID
@@ -20,9 +27,6 @@ This sample demonstrates Interactive Canvas for Google Assistant Actions.
 1. Run `gactions login` to login to your account.
 1. Run `gactions push` to push your project.
 1. Run `gactions deploy preview` to deploy your project.
-
-#### Firebase Hosting Deployment
-1. Run `firebase deploy --project {PROJECT_ID} --only hosting` to deploy the web app to Firebase Hosting
 
 ### Running this Sample
 + You can test your Action on any Google Assistant-enabled device on which the Assistant is signed into the same account used to create this project. Just say or type, “OK Google, talk to my test app”.

@@ -116,6 +116,9 @@ export class Scene {
     console.log(`Request in flight`);
     this.button.texture = this.button.textureButtonDisabled;
     this.sprite.spin = false;
+    console.log(this.action.canvas)
+    this.action.canvas.setCanvasState({baz: Math.random()})
+    console.log('Update random id')
     const res = await this.action.canvas.sendTextQuery('Restart game');
 
     if (res.toUpperCase() !== 'SUCCESS') {

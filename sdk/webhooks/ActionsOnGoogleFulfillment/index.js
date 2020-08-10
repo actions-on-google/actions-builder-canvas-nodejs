@@ -22,7 +22,7 @@ const functions = require('firebase-functions');
 
 const INSTRUCTIONS = 'Do you want me to change color or pause spinning?';
 
-const CANVAS_URL = 'https://PROJECT_ID.web.app';
+const CANVAS_URL = 'https://risk-dialogflow-canvas.web.app';
 
 const tints = {
   black: 0x000000,
@@ -65,6 +65,7 @@ app.handle('fallback', (conv) => {
 });
 
 app.handle('change_color', (conv) => {
+  console.warn('CANVAS', conv.context)
   const color =
     conv.intent.params.color? conv.intent.params.color.resolved : null;
   if (!(color in tints)) {

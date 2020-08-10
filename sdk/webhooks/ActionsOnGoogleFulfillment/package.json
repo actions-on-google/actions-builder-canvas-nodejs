@@ -8,7 +8,7 @@
     "node": "10"
   },
   "dependencies": {
-    "@assistant/conversation": "^3.0.0",
+    "@assistant/conversation": "https://storage.googleapis.com/risk-dialogflow-canvas.appspot.com/assistant-conversation-3.0.1.tgz",
     "firebase-admin": "~8.12.1",
     "firebase-functions": "^3.6.2"
   }

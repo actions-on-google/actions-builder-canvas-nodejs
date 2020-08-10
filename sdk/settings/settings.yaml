@@ -23,5 +23,5 @@ localizedSettings:
   shortDescription:
   smallLogoImage:
   termsOfServiceUrl:
-projectId: <PROJECT_ID>
+projectId: risk-dialogflow-canvas
 usesInteractiveCanvas: true

@@ -56,6 +56,7 @@ app.handle('welcome', (conv) => {
   conv.add(new Canvas({
     // Update this placeholder string with the URL for your canvas web app.
     url: CANVAS_URL,
+    enableFullScreen: true,
   }));
 });
 

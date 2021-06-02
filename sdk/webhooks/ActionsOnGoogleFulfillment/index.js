@@ -57,6 +57,7 @@ app.handle('welcome', (conv) => {
     // Update this placeholder string with the URL for your canvas web app.
     url: CANVAS_URL,
     enableFullScreen: true,
+    continueTtsDuringTouch: true,
   }));
 });
 

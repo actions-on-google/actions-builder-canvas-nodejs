@@ -25,6 +25,9 @@ This sample demonstrates Interactive Canvas for Google Assistant Actions.
 
 #### Actions CLI
 1. Install the [Actions CLI](https://developers.google.com/assistant/actionssdk/gactions)
+1. Once Actions CLI is installed, add the path of gactions into the `.bashrc` file to access gactions  from any file directory.
+`export PATH="$PATH:<path_to_gactions>"` From more information refer to this answer [StackOverflow](https://stackoverflow.com/a/45040330/5539913)
+1. Navigate to `your_project_directory` and run `gactions init <PROJECT_NAME>` 
 1. Navigate to `sdk/settings/settings.yaml`, and replace `<PROJECT_ID>` with your project ID
 1. Navigate to the `sdk/` directory by running `cd sdk` from the root directory of this project.
 1. Run `gactions login` to login to your account.
